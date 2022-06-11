@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../templates/head', {title: 'About'}); %>
+</head>
+<body>
+    <header>
+        <%- include('../templates/header') %>
+    </header>
+    <main class="container">
+        <h2 class="mb-3">About us</h2>
+        <div class="row">
+            <div class="col-5">
+                <h4>Contact</h4>
+                <table class="table table-borderless table-sm">
+                    <tbody>
+                        <tr>
+                            <td>Email</td>
+                            <td>:</td>
+                            <td><a href="mailto:dummy@marketplace.com">dummy@marketplace.com</a></td>
+                        </tr>
+                        <tr>
+                            <td>Phone</td>
+                            <td>:</td>
+                            <td>(+62)754-40303</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row d-flex align-items-center text-center border-top pt-3">
+            <h4>Partners</h4>
+            <div class="col">
+                <img src=<%= "/image/Lenovo.png" %> width="65%">
+            </div>
+            <div class="col">
+                <img src=<%= "/image/Asus.png" %> width="65%">
+            </div>
+            <div class="col">
+                <img src=<%= "/image/Acer.png" %> width="65%">
+            </div>
+        </div>
+        <div class="row justify-content-md-center border-top pt-3">
+            <h4 class="text-center mb-3">Social media</h4>
+            <% data.forEach((item) => { %>
+                <div class="col col-lg-2">
+                    <a href=<%= "https://www." + item.name + ".com" %> class="link" title="<%= item.name %>">
+                        <div class="card border-light" style="<%= "background-color:" + item.backgroundColor + "; background-image:" + item.backgroundImage + ";" %>">
+                            <div class="card-body">
+                                <div class="card-title mb-4 h5">
+                                    <i class="<%= "fa-brands fa-xl fa-" + item.name + " text-light" %>"></i>
+                                </div>
+                                <div class="name profile-name text-light"><%= item.profileName %></div>
+                                <div class="name user-name text-light"><%= item.userName %></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            <% }) %>
+        </div>
+    </main>
+</body>
+</html>

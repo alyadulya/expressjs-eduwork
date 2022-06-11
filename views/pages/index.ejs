@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../templates/head', {title: 'Home'}); %>
+</head>
+<body>
+    <header>
+        <%- include('../templates/header') %>
+    </header>
+    <main class="container">
+        <div class="p-5 mb-4 text-white rounded-3" style="background-image: linear-gradient(121deg, rgb(0, 0, 0), rgb(8, 11, 99));">
+            <div class="py-5">
+                <h1 class="display-5 fw-bold">Dummy Marketplace</h1>
+                <p class="col-md-8 fs-4 lead">We offer the best and most sophisticated computer device from several popular brands, which will bolster your daily business in order to obtain a better life. What are you waiting for? Check out our products now!</p>
+                <a href="/products">
+                    <button class="btn btn-outline-light btn-lg" type="button">Buy something!</button>
+                </a>
+            </div>
+        </div>
+    </main>
+    <!-- <h1>Home page</h1>
+    <h2><%= message %></h2>
+    <p><b>Status</b> : <%= status %></p>
+    <p>See our <a href="/products">products</a></p> -->
+</body>
+</html>

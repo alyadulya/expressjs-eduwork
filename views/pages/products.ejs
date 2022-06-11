@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../templates/head', {title: 'Products'}); %>
+</head>
+<body>
+    <header>
+        <%- include('../templates/header') %>
+    </header>
+    <main class="container">
+        <h2 class="mb-3">Products</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <% data.forEach((item) => { %>
+                <div class="col">
+                    <div class="card">
+                        <img src=<%= "/image/" + item.image %> class="card-img-top" alt="<%= item.name %>">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= item.name %></h5>
+                            <p class="card-text"><%= item.price %></p>
+                            <a href=<%= "/products/" + item.id %> class="btn btn-primary">Lihat detail</a>
+                          </div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </main>
+</body>
+</html>
